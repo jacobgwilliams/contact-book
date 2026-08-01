@@ -25,6 +25,16 @@ bin/start.sh
 
 Then open [http://localhost:3000](http://localhost:3000).
 
+## Frontend structure
+
+React code lives under `app/frontend/`. Each piece has a focused job:
+
+- **`App`** — page layout and composition
+- **`ContactList`** — list behavior: search state, filtering, empty state, rendering cards
+- **`ContactCard`** — presentation only; displays the fields passed in via props
+- **`SearchBar`** — reusable controlled search input
+- **`data/contacts.js`** — temporary seed data until the Rails API is wired up
+
 ## Tests
 
 ```bash
