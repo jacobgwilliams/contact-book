@@ -1,4 +1,6 @@
+import { useState } from "react"
 import ContactList from "./ContactList"
+import SearchBar from "./SearchBar"
 
 const contacts = [
   {
@@ -30,11 +32,28 @@ const contacts = [
   },
 ]
 
+function contactMatchesQuery(contact, query) {
+  const name = `${contact.firstName} ${contact.lastName}`.toLowerCase()
+
+  return (
+    name.includes(query) ||
+    contact.email.toLowerCase().includes(query) ||
+    contact.company.toLowerCase().includes(query)
+  )
+}
+
 export default function App() {
+  const [searchQuery, setSearchQuery] = useState("")
+  const normalizedQuery = searchQuery.trim().toLowerCase()
+  const filteredContacts = normalizedQuery
+    ? contacts.filter((contact) => contactMatchesQuery(contact, normalizedQuery))
+    : contacts
+
   return (
     <main>
       <h1>Contact Book</h1>
-      <ContactList contacts={contacts} />
+      <SearchBar value={searchQuery} onChange={setSearchQuery} />
+      <ContactList contacts={filteredContacts} />
     </main>
   )
 }
