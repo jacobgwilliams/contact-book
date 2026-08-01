@@ -1,24 +1,32 @@
-# README
+# Contact Book
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A learning project for experimenting with a **React** frontend and a **Rails** backend.
 
-Things you may want to cover:
+**Repository:** [https://github.com/jacobgwilliams/contact-book](https://github.com/jacobgwilliams/contact-book)
 
-* Ruby version
+## About
 
-* System dependencies
+This app is a sandbox for exploring how a modern React UI integrates with a Rails API and server-rendered pages. The goal is hands-on practice—not production polish—around component structure, props, API communication, and the tooling that connects the two stacks.
 
-* Configuration
+## Stack
 
-* Database creation
+- **Backend:** Ruby on Rails 8.1, PostgreSQL
+- **Frontend:** React 19, Vite
+- **Ruby:** 4.0.6
 
-* Database initialization
+## Getting started
 
-* How to run the test suite
+```bash
+bundle install
+npm install
+bin/rails db:setup
+bin/dev
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Then open [http://localhost:3000](http://localhost:3000).
 
-* Deployment instructions
+## Tests
 
-* ...
+```bash
+bin/rails test
+```
