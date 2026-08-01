@@ -1,4 +1,5 @@
-import { defineConfig } from "vite"
+/// <reference types="vitest/config" />
+import { defineConfig } from "vitest/config"
 import RubyPlugin from "vite-plugin-ruby"
 import react from "@vitejs/plugin-react"
 
@@ -7,4 +8,8 @@ export default defineConfig({
     RubyPlugin(),
     react(),
   ],
+  test: {
+    environment: "node",
+    include: ["**/*.test.{js,jsx}"],
+  },
 })

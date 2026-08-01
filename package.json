@@ -1,10 +1,15 @@
 {
   "private": true,
   "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.4",
     "vite": "^8.1.5",
-    "vite-plugin-ruby": "^5.2.2"
+    "vite-plugin-ruby": "^5.2.2",
+    "vitest": "^4.1.10"
   },
   "dependencies": {
     "react": "^19.2.8",
