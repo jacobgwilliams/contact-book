@@ -32,3 +32,30 @@
 - Create ContactCard component
 - Pass props
 - Render a list of contacts
+
+## Session 2 — Components and Props
+**Date:** July 29, 2026
+
+### Goals
+- Break the React application into reusable components
+- Learn how props pass data between components
+- Render a collection using `map`
+
+### Accomplished
+- Created an `App` component
+- Created a reusable `ContactCard`
+- Created a `ContactList`
+- Rendered hard-coded contact data
+- Moved mounting logic into the Vite entrypoint
+
+### Learned
+- Components are reusable functions that return JSX.
+- Props pass read-only data from parent components to child components.
+- JavaScript arrays can be rendered with `map`.
+- React list elements need stable keys.
+- Data generally flows downward through the component tree.
+
+### Next Session
+- Introduce React state with `useState`
+- Add a search input
+- Filter the visible contacts
