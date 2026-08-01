@@ -38,5 +38,6 @@ React code lives under `app/frontend/`. Each piece has a focused job:
 ## Tests
 
 ```bash
+npm test
 bin/rails test
 ```
