@@ -20,7 +20,7 @@ This app is a sandbox for exploring how a modern React UI integrates with a Rail
 bundle install
 npm install
 bin/rails db:setup
-bin/dev
+bin/start.sh
 ```
 
 Then open [http://localhost:3000](http://localhost:3000).
